@@ -1,17 +1,28 @@
+/**
+ * OS namespace
+ */
 export namespace OS {
+	/**
+	 * Types of supported OS
+	 */
 	export enum Type {
 		Windows = "win32",
 		Linux = "linux",
 		MacOS = "darwin",
 		Unsupported = "Unsupported"
 	}
+	/**
+	 * Detect OS from platform
+	 * 
+	 * @param platform The platform string to detect OS from
+	 */
 	export const detect = (platform: string = process.platform) => {
 		return (platform === "win32")
-			? OS.Type.Windows
+			? Type.Windows
 			: (platform === "darwin")
-				? OS.Type.MacOS
+				? Type.MacOS
 				: (platform === "linux")
-					? OS.Type.Linux
-					: OS.Type.Unsupported
+					? Type.Linux
+					: Type.Unsupported
 	}
 }
