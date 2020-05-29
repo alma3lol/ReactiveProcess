@@ -42,7 +42,7 @@ The process has other properties including all RxJS `Subject`'s and the followin
 ### Functions
 
 Functions include all RxJS `Subject`'s and `start` function:  
-- `start`: A function to start the process. (see blow for more details)
+- `start`: A function to start the process. (see [blow](#start) for more details)
 
 ## Usage with MobX
 
@@ -67,3 +67,26 @@ class Processes {
 
 The `Model` class is an extend of RxJS' `Subject` and inherts all of it's functionality.  
 You can subscribe to it manually whenever/wherever needed.
+
+## ReactiveProcess.create vs ReactiveProcess.Model
+
+There's a small difference between `.create` & `.Model` in `ReactiveProcess`: *Using `.Model` doesn't start the process upon initiation.*
+
+To start the process when using `.Model`, you need to call `Model.start`:
+
+```ts
+const model = new ReactiveProcess.Model(...);
+model.start();
+/* OR */
+const model = new ReactiveProcess.Model(...).start();
+```
+
+## Start
+
+This function has the following call signature:
+
+```ts
+() => this
+```
+
+It returns `this` which is the model's instance itself.

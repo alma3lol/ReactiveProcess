@@ -23,7 +23,7 @@ describe('Reactive Process', () => {
 			expect(model).toBeInstanceOf(ReactiveProcess.Model)
 		}
 	})
-	test('should create a process model using model initation', (done) => {
+	test('should create a process model using model initiation', (done) => {
 		const subscribe: Process.Subscribe = {
 			next: (cast) => {
 				if (cast.status)
