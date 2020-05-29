@@ -1,48 +1,48 @@
 {
-  "name": "@alma3lol/reactive-process",
-  "version": "1.0.0",
-  "description": "An npm process moduling package made with RxJS",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "scripts": {
-    "clean": "node ./scripts/run-clean.js *.tsbuildinfo dist",
-    "build": "tsc",
-    "build:watch": "tsc -w",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "start": "node .",
-    "start:watch": "nodemon .",
-    "publish-it": "npm publish"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alma3lol/ReactiveProcess.git"
-  },
-  "author": "Omar Almalol",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/alma3lol/ReactiveProcess/issues"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "homepage": "https://github.com/alma3lol/ReactiveProcess#readme",
-  "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.8.3",
-    "@babel/plugin-proposal-decorators": "^7.8.3",
-    "@babel/plugin-transform-runtime": "^7.9.6",
-    "@babel/plugin-transform-typescript": "^7.10.1",
-    "@babel/preset-env": "^7.9.6",
-    "@babel/preset-typescript": "^7.9.0",
-    "@types/jest": "^25.2.1",
-    "@types/node": "^13.13.5",
-    "jest": "^26.0.1",
-    "nodemon": "^2.0.3",
-    "tslib": "^1.11.1",
-    "typescript": "^3.8.3"
-  },
-  "dependencies": {
-    "rimraf": "^3.0.2",
-    "rxjs": "^6.5.5"
-  }
+	"name": "@alma3lol/reactive-process",
+	"version": "1.0.1",
+	"description": "An npm process moduling package made with RxJS",
+	"main": "index.js",
+	"types": "index.d.ts",
+	"scripts": {
+		"clean": "node ./scripts/run-clean.js *.tsbuildinfo dist",
+		"build": "tsc",
+		"build:watch": "tsc -w",
+		"test": "jest",
+		"test:watch": "jest --watch",
+		"start": "node .",
+		"start:watch": "nodemon .",
+		"publish-it": "npm publish"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alma3lol/ReactiveProcess.git"
+	},
+	"author": "Omar Almalol",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/alma3lol/ReactiveProcess/issues"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"homepage": "https://github.com/alma3lol/ReactiveProcess#readme",
+	"devDependencies": {
+		"@babel/plugin-proposal-class-properties": "^7.8.3",
+		"@babel/plugin-proposal-decorators": "^7.8.3",
+		"@babel/plugin-transform-runtime": "^7.9.6",
+		"@babel/plugin-transform-typescript": "^7.10.1",
+		"@babel/preset-env": "^7.9.6",
+		"@babel/preset-typescript": "^7.9.0",
+		"@types/jest": "^25.2.1",
+		"@types/node": "^13.13.5",
+		"jest": "^26.0.1",
+		"nodemon": "^2.0.3",
+		"tslib": "^1.11.1",
+		"typescript": "^3.8.3"
+	},
+	"dependencies": {
+		"rimraf": "^3.0.2",
+		"rxjs": "^6.5.5"
+	}
 }
