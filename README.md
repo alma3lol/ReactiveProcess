@@ -90,3 +90,8 @@ This function has the following call signature:
 ```
 
 It returns `this` which is the model's instance itself.
+
+## GOALS
+
+- Add support for deamon process
+- Add stdin support
