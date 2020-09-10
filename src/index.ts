@@ -1,2 +1,2 @@
 export * from './OS'
-export * from './ReactiveProcess'
+export * from './Process'
