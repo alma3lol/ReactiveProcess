@@ -47,15 +47,19 @@ export class Process extends Subject<any> {
 			this._process = spawn(this.cmd, this.args);
 			this._pid = this._process.pid;
 			this._exitCode = undefined;
-			this._process.stdout.on("data", this.next);
-			this._process.stderr.on("data", this.error);
+			this._process.stdout.on("data", data => {
+				if (this.observers.length > 0) this.next(data);
+			});
+			this._process.stderr.on("data", data => {
+				if (this.observers.length > 0) this.error(data);
+			});
 			this._status = Status.Running;
 			this._process.on("error", (err) => { throw err })
 			const exitFunction = (code: number) => {
 				this._status = Status.Stopped;
 				this._exitCode = code;
 				this._pid = undefined;
-				this.complete();
+				if (this.observers.length > 0) this.complete();
 			}
 			if (OS.detect() === OS.Type.Windows) this._process.on("exit", exitFunction);
 			else this._process.on("close", exitFunction);
