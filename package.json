@@ -1,6 +1,6 @@
 {
 	"name": "@alma3lol/reactive-process",
-	"version": "2.0.1",
+	"version": "2.0.2",
 	"description": "An npm process moduling package made with RxJS",
 	"main": "index.js",
 	"types": "index.d.ts",
