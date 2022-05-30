@@ -43,6 +43,6 @@
 	},
 	"dependencies": {
 		"rimraf": "^3.0.2",
-		"rxjs": "^6.5.5"
+		"rxjs": "^7.0.0"
 	}
 }
